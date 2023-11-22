@@ -1,0 +1,9 @@
+{
+  "logins": [
+    {
+      "type": "externalUser",
+      "email": "some@email.com",
+      "password": "ChangeMe"
+    }
+  ]
+}
