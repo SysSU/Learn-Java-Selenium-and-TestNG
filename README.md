@@ -20,29 +20,41 @@ This repo. serves as notes for myself as I went through the Udemy course [Seleni
 
 ## Run Tests
 ### Command Line / Terminal
-You can run all the tests by running:
+**You can run all the tests by running:**
 
 ```bash
 mvn clean test
 ```
 
-You can execute a specific test class directly from the command line:
+**You can execute a specific test class directly from the command line:**
 
 ```bash
 mvn clean test -Dtest="syssu.SubmitOrderTests"
 ```
 
-You can execute a specific test within a class directly from the command line:
+**You can execute a specific test within a class directly from the command line:**
 
 ```bash
 mvn clean test -Dtest="syssu.SubmitOrderTests#submitOrder"
 ```
 
-You can run a specific XML file using:
+**You can run a specific XML file using:**
 
 ```bash
 mvn clean test -Dsurefire.suiteXmlFiles=./testng.xml
 ```
+**You can create/run Maven tests by profile:**
+
+Modify the `<profiles>` section within `./pom.xml` creating profiles. See existing examples. 
+
+Run example `Regression` profile
+
+```bash
+mvn clean test -P Regression
+```
+
+Note: I'm not sure why but I had to create two profiles with unique IDs otherwise it appeared to run all the tests as if I just ran `mvn clean test`.
+
 
 ## FAQ
 ### Windows: CMD vs PS
